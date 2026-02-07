@@ -1,0 +1,9 @@
+project:
+  output-dir: _docs
+
+website:
+  title: "python-interviews"
+  site-url: "https://j5ynth.github.io/python-interviews"
+  description: "A repository to prepare for Python interviews"
+  repo-branch: main
+  repo-url: "https://github.com/j5ynth/python-interviews"

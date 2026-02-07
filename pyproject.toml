@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "python-interviews"
+dynamic = ["version"]
+description = "A repository to prepare for Python interviews"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "Apache-2.0"}
+authors = [{name = "j5ynth", email = "240160276+j5ynth@users.noreply.github.com"}]
+keywords = ['nbdev']
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+]
+dependencies = []
+
+[project.urls]
+Repository = "https://github.com/j5ynth/python-interviews"
+Documentation = "https://j5ynth.github.io/python-interviews/"
+
+[project.entry-points.nbdev]
+python_interviews = "python_interviews._modidx:d"
+
+[tool.setuptools.dynamic]
+version = {attr = "python_interviews.__version__"}
+
+[tool.setuptools.packages.find]
+include = ["python_interviews"]
+
+[tool.nbdev]
