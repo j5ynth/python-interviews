@@ -5,5 +5,7 @@ d = { 'settings': { 'branch': 'main',
                 'doc_host': 'https://j5ynth.github.io',
                 'git_url': 'https://github.com/j5ynth/python-interviews',
                 'lib_path': 'python_interviews'},
-  'syms': { 'python_interviews.core': { 'python_interviews.core.foo': ('core.html#foo', 'python_interviews/core.py'),
-                                        'python_interviews.core.say_hello': ('core.html#say_hello', 'python_interviews/core.py')}}}
+  'syms': { 'python_interviews.core': { 'python_interviews.core.foo': ('introduction.html#foo', 'python_interviews/core.py'),
+                                        'python_interviews.core.say_hello': ('introduction.html#say_hello', 'python_interviews/core.py')},
+            'python_interviews.export': { 'python_interviews.export.say_hello': ( 'introduction.html#say_hello',
+                                                                                  'python_interviews/export.py')}}}
