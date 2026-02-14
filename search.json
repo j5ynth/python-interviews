@@ -1,0 +1,232 @@
+[
+  {
+    "objectID": "conditionals.html",
+    "href": "conditionals.html",
+    "title": "Chapter 2 - Making Decisions",
+    "section": "",
+    "text": "In the previous chapter, we learned how to Talk to Python. Now it is time to make Python think.\nIn interviews, writing correct conditional logic is more important than writing long programs. Interviewers often test how cleary you can express decisions using simple constructs like if, elif, and else.\nLet us start with the basics.",
+    "crumbs": [
+      "Chapter 2 - Making Decisions"
+    ]
+  },
+  {
+    "objectID": "conditionals.html#the-if-statement",
+    "href": "conditionals.html#the-if-statement",
+    "title": "Chapter 2 - Making Decisions",
+    "section": "The if statement",
+    "text": "The if statement\nThe if statement allows Python to run code only when a condition evaluates to True.\n\nscore = 80\n\nif score &gt;= 80:\n    print(\"You're eligible for interview.\")\n\nYou're eligible for interview.\n\n\nIf the condition is True, the indented block runs. If it is False, Python skips it.\nIndentation is not optional in Python. It defines the structure of your program. This is something interviewers pay close attention to.",
+    "crumbs": [
+      "Chapter 2 - Making Decisions"
+    ]
+  },
+  {
+    "objectID": "conditionals.html#adding-else",
+    "href": "conditionals.html#adding-else",
+    "title": "Chapter 2 - Making Decisions",
+    "section": "Adding else",
+    "text": "Adding else\nWhen you want one block of code to run if a condition is True and another block if it is False, you use else.\n\nscore = 79\n\nif score &gt;=80:\n    print(\"You're eligible for interview.\")\nelse:\n    print(\"You're not eligible for interview.\")\n\nYou're not eligible for interview.",
+    "crumbs": [
+      "Chapter 2 - Making Decisions"
+    ]
+  },
+  {
+    "objectID": "conditionals.html#multiple-conditions-with-elif",
+    "href": "conditionals.html#multiple-conditions-with-elif",
+    "title": "Chapter 2 - Making Decisions",
+    "section": "Multiple conditions with elif",
+    "text": "Multiple conditions with elif\nSometimes you need to check more than two possibilities. That is where elif comes in.\n\nscore = 75\n\nif score &gt;= 90:\n    print(\"Grade A\")\nelif score &gt;= 75:\n    print(\"Grade B\")\nelif score &gt;= 60:\n    print(\"Grade C\")\nelse:\n    print(\"Grade D\")\n\nGrade B\n\n\nPython evaluates conditions from top to bottom at the first True condition",
+    "crumbs": [
+      "Chapter 2 - Making Decisions"
+    ]
+  },
+  {
+    "objectID": "conditionals.html#comparision-and-logical-operators",
+    "href": "conditionals.html#comparision-and-logical-operators",
+    "title": "Chapter 2 - Making Decisions",
+    "section": "Comparision and logical operators",
+    "text": "Comparision and logical operators\nCommon Comparison operators:\n\n== equal to\n!= not equal to\n&gt; greater than\n&lt; less than\n&gt;= greater than or equal to\n&lt;= less than or equal to\n\nLogical operators allow you to combine conditions:\n\nand\nor\nnot\n\nExample:\n\nmath_score = 80\npassed_english = True\n\nif passed_english and math_score &gt;= 80:\n    print(\"You're eligible for interview.\")\n\nYou're eligible for interview.",
+    "crumbs": [
+      "Chapter 2 - Making Decisions"
+    ]
+  },
+  {
+    "objectID": "conditionals.html#truthy-and-falsy-values",
+    "href": "conditionals.html#truthy-and-falsy-values",
+    "title": "Chapter 2 - Making Decisions",
+    "section": "Truthy and falsy values",
+    "text": "Truthy and falsy values\nNot all conditions are simple comparisons. In Python, certain values are treated as False automatically. These are known as falsy values.\nCommon falsy values include.\n\n0\n\"\" (empty string)\n[] (empty list)\nNone\nFalse\n\nEverything else is generally considered True.\nExample:\n\ncolors = []\n\nif colors:\n    print(\"List of colors is not empty\")\nelse:\n    print(\"List of colors is empty\")\n\nList of colors is empty\n\n\nThis is a very common interview concept.",
+    "crumbs": [
+      "Chapter 2 - Making Decisions"
+    ]
+  },
+  {
+    "objectID": "conditionals.html#predict-the-output",
+    "href": "conditionals.html#predict-the-output",
+    "title": "Chapter 2 - Making Decisions",
+    "section": "Predict the output",
+    "text": "Predict the output\nTry to predict the output of the following code:\n\nx = 0\n\nif x:\n    print(\"Yes\")\nelse:\n    print(\"No\")",
+    "crumbs": [
+      "Chapter 2 - Making Decisions"
+    ]
+  },
+  {
+    "objectID": "conditionals.html#common-mistakes-to-watch-out-for",
+    "href": "conditionals.html#common-mistakes-to-watch-out-for",
+    "title": "Chapter 2 - Making Decisions",
+    "section": "Common mistakes to watch out for",
+    "text": "Common mistakes to watch out for\n\nUsing = instead of == in conditions\nForgetting indentation\nWriting overly complex nested conditions when simpler logic would work\n\nClean and readable conditional logic leaves a strong impression in interviews.",
+    "crumbs": [
+      "Chapter 2 - Making Decisions"
+    ]
+  },
+  {
+    "objectID": "conditionals.html#quick-recap",
+    "href": "conditionals.html#quick-recap",
+    "title": "Chapter 2 - Making Decisions",
+    "section": "Quick recap",
+    "text": "Quick recap\nIn this chapter, you learned how to:\n\nUse if, elif, and else\nWrite comparison expressions\nCombine conditions using logical operators\nUnderstand truthy and falsy values\n\nWith this foundation, you can now control the flow of your programs.\nIn the next chapter, we will explore loops and learn how to repeat tasks efficiently.",
+    "crumbs": [
+      "Chapter 2 - Making Decisions"
+    ]
+  },
+  {
+    "objectID": "introduction.html",
+    "href": "introduction.html",
+    "title": "Introduction",
+    "section": "",
+    "text": "In today’s fast-paced technology landscape, preparing for a new project or job interview can be challenging. This is especially true when someone has not revised core concepts for a long time and suddenly needs to refresh their knowledge before an interview or a technical assessment panel.\nThis book is an attempt to revisit both basic and advanced concepts of Python in a practical and approachable way. While a detailed chapter outline is still evolving, the primary goal is simple: readers should be able to learn by writing and running code examples, and by understanding the output they produce.\nLet us begin with a simple example of a Python function.\n\n\nsay_hello\n\ndef say_hello(\n    to\n):\n\nSay Hello to someone.\nIn Python, the keyword def is used to define a function. Here, the name of the function is say_hello, and it accepts a single parameter named to, which is enclosed in parentheses and followed by a colon (:).\nThe line enclosed within triple/duouble quotes is known as a docstring. It provides documentation about the purpose and behavior of the function and is often used by developers and tools to understand what the function does.\nFinally, the return statement sends a value back to the caller. In this example, an f-string (a formatted string prefixed with the letter f) is used to interpolate the value stored in the variable to into the output string.\nLet us call the function as displayed below with a value.\n\nsay_hello(\"J5ynth\")\n\n'Hello J5ynth!'\n\n\nThe output of the function is displayed above and is enclosed within single quotes (’). This happens because the Jupyter Notebook displays the return value of the function by internally calling Python’s built-in print method. Alternatively, one can explicitly call the print method to display the output, as shown below.\nprint(say_hello(\"J5ynth\"))\nBefore trying to write and run the function on your own, it is recommended to first get accustomed to the basic building blocks of the language.\nIf this introduction served as a useful primer, provided clarity, and motivated you to begin preparing for Python interviews, let us move on to the next chapter. We will start with one of the most fundamental concepts in Python - the print statement.",
+    "crumbs": [
+      "Introduction"
+    ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "python-interviews",
+    "section": "",
+    "text": "This file will become your README and also the index of your documentation.",
+    "crumbs": [
+      "python-interviews"
+    ]
+  },
+  {
+    "objectID": "index.html#developer-guide",
+    "href": "index.html#developer-guide",
+    "title": "python-interviews",
+    "section": "Developer Guide",
+    "text": "Developer Guide\nIf you are new to using nbdev here are some useful pointers to get you started.\n\nInstall python_interviews in Development mode\n# make sure python_interviews package is installed in development mode\n$ pip install -e .\n\n# make changes under nbs/ directory\n# ...\n\n# compile to have changes apply to python_interviews\n$ nbdev_prepare",
+    "crumbs": [
+      "python-interviews"
+    ]
+  },
+  {
+    "objectID": "index.html#usage",
+    "href": "index.html#usage",
+    "title": "python-interviews",
+    "section": "Usage",
+    "text": "Usage\n\nInstallation\nInstall latest from the GitHub repository:\n$ pip install git+https://github.com/j5ynth/python-interviews.git\nor from conda\n$ conda install -c j5ynth python_interviews\nor from pypi\n$ pip install python_interviews\n\n\nDocumentation\nDocumentation can be found hosted on this GitHub repository’s pages. Additionally you can find package manager specific guidelines on conda and pypi respectively.",
+    "crumbs": [
+      "python-interviews"
+    ]
+  },
+  {
+    "objectID": "index.html#how-to-use",
+    "href": "index.html#how-to-use",
+    "title": "python-interviews",
+    "section": "How to use",
+    "text": "How to use\nFill me in please! Don’t forget code examples:\n\n1+1\n\n2",
+    "crumbs": [
+      "python-interviews"
+    ]
+  },
+  {
+    "objectID": "print.html",
+    "href": "print.html",
+    "title": "Chapter 1 - Talking To Python",
+    "section": "",
+    "text": "Before we get into anything fancy, we need to learn how to talk to Python.\nAlmost every Python program you will ever write - whether for an interview, a script, or a real-world application - starts with simple statements that display output and store values.\nThis chapter focuses on the abosolute essentials. If you already know some of these, treat this as a quick revision. If not, take a few minutes to run the examples and observe.",
+    "crumbs": [
+      "Chapter 1 - Talking To Python"
+    ]
+  },
+  {
+    "objectID": "print.html#the-print-statement",
+    "href": "print.html#the-print-statement",
+    "title": "Chapter 1 - Talking To Python",
+    "section": "The print statement",
+    "text": "The print statement\nThe print statement is one of the most frequently used functions in Python. It is used to display output on the screen and is often the first thing you write when learning a language.\n\nprint(\"Hello, Python\")\n\nHello, Python\n\n\nWhen this line is run, Python prints the text inside the quotes to the output. In interviews, print is commonly used to check logic, verify results, or demonstrate how a pience of code behaves.\nYou can print multiple values at one.\n\nprint(\"Python\", \"Interview\", \"Prep\")\n\nPython automatically separates them with a space",
+    "crumbs": [
+      "Chapter 1 - Talking To Python"
+    ]
+  },
+  {
+    "objectID": "print.html#variables-and-assignments",
+    "href": "print.html#variables-and-assignments",
+    "title": "Chapter 1 - Talking To Python",
+    "section": "Variables and assignments",
+    "text": "Variables and assignments\nA variable is used to store data so that it can be reused later. In Python, assigning a value to a variable is straightforward.\n\nname = \"J5ynth\"\nage = 5\n\nHere, name stores a string value and age stores an integer. Python figures out the data type automatically, so there is no need to explicitly mention it.\nOne important thing to remember:\n\nPython is dynamically typed.\n\nThis means the same variable can point to different types of values at different times.\n\nvalue = 10\nvalue = \"ten\"\n\nThis is perfectly valid Python code.",
+    "crumbs": [
+      "Chapter 1 - Talking To Python"
+    ]
+  },
+  {
+    "objectID": "print.html#basic-data-types",
+    "href": "print.html#basic-data-types",
+    "title": "Chapter 1 - Talking To Python",
+    "section": "Basic data types",
+    "text": "Basic data types\nSome of the most commonly used data types in Python are:\n\nint - whole numbers\nfloat - decimal numbers\nstr - text values\nbool - True or False\n\nExamples:\n\ncount = 3\nprice = 99.99\nlanguage = \"Python\"\nis_ready = True\n\nTo check the type of a variable, you use use built-in type() function.\n\nprint(type(language))\n\n&lt;class 'str'&gt;\n\n\nThis is a common interview question, especially for beginners.",
+    "crumbs": [
+      "Chapter 1 - Talking To Python"
+    ]
+  },
+  {
+    "objectID": "print.html#string-formatting-with-f-strings",
+    "href": "print.html#string-formatting-with-f-strings",
+    "title": "Chapter 1 - Talking To Python",
+    "section": "String formatting with f-strings",
+    "text": "String formatting with f-strings\nStrings are everywhere in Python, and formatting them properly makes your code cleaner and more readable. One of the most popular ways to do this is by using formatted strings, also known as f-strings.\n\nname = \"J5ynth\"\nprint(f\"Hello, {name}\")\n\nHello, J5ynth\n\n\nThe letter f before the string tells Python to evaluate anything inside the curly braces {} and replace it with the corresponding value.\nThis approach is both readable and efficient, and interviewers often expect candiates to be comfortable with it.",
+    "crumbs": [
+      "Chapter 1 - Talking To Python"
+    ]
+  },
+  {
+    "objectID": "print.html#taking-input-from-the-user",
+    "href": "print.html#taking-input-from-the-user",
+    "title": "Chapter 1 - Talking To Python",
+    "section": "Taking input from the user",
+    "text": "Taking input from the user\nPython allows you to take input from the user using input() function.\nuser_name = input(\"Enter your name: \")\nprint(f\"Welcome, {user_name}\")\nOne important thing to note is that\n\ninput always returns a string.\n\nEven if the user enters a number, Python teats it as text unless explicitly converted.\nage = input(\"Enter your age: \")\nprint(type(age))\nWe will revisit type conversion in later chapters.",
+    "crumbs": [
+      "Chapter 1 - Talking To Python"
+    ]
+  },
+  {
+    "objectID": "print.html#predict-the-output",
+    "href": "print.html#predict-the-output",
+    "title": "Chapter 1 - Talking To Python",
+    "section": "Predict the output",
+    "text": "Predict the output\n\nx = 10\ny = \"10\"\n\n# print(x + x)\n# print(y + y)\n\nRun the code and compare the result with your expectation. Questions like these frequently appear in interviews to test conceptual clarity.",
+    "crumbs": [
+      "Chapter 1 - Talking To Python"
+    ]
+  },
+  {
+    "objectID": "print.html#common-mistakes-to-watch-out-for",
+    "href": "print.html#common-mistakes-to-watch-out-for",
+    "title": "Chapter 1 - Talking To Python",
+    "section": "Common mistakes to watch out for",
+    "text": "Common mistakes to watch out for\n\nForgetting quotes around strings\nMixing strings and numbers without proper conversion\nAssuming input() returns a number\n\nThese mistakes are normal when learning and easy to fix once you are aware of them.",
+    "crumbs": [
+      "Chapter 1 - Talking To Python"
+    ]
+  },
+  {
+    "objectID": "print.html#quick-recap",
+    "href": "print.html#quick-recap",
+    "title": "Chapter 1 - Talking To Python",
+    "section": "Quick recap",
+    "text": "Quick recap\nIn this chapter, you learned how to:\n\nUse the print statement to display output\nCreate and assign variables\nUnderstand basic Python data types\nFormat strings using f-strings\nTake input from the user\n\nIf these concepts feel comfortable, your are off tto a good start. In the next chapter, we will look at how Python makes decisions using conditional statements.",
+    "crumbs": [
+      "Chapter 1 - Talking To Python"
+    ]
+  }
+]
