@@ -3,7 +3,7 @@
 # %% auto #0
 __all__ = ['say_hello']
 
-# %% ../nbs/00_Introduction.ipynb #299b2bc8
+# %% ../nbs/00_Introduction.ipynb #021911fc
 def say_hello(to):
     "Say Hello to someone."
     return f"Hello {to}!"

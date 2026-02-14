@@ -4,3 +4,4 @@ website:
       - index.ipynb
       - 00_Introduction.ipynb
       - 01_Print.ipynb
+      - 02_Conditionals.ipynb

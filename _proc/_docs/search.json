@@ -1,52 +1,92 @@
 [
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "python-interviews",
+    "objectID": "conditionals.html",
+    "href": "conditionals.html",
+    "title": "Chapter 2 - Making Decisions",
     "section": "",
-    "text": "This file will become your README and also the index of your documentation.",
+    "text": "In the previous chapter, we learned how to Talk to Python. Now it is time to make Python think.\nIn interviews, writing correct conditional logic is more important than writing long programs. Interviewers often test how cleary you can express decisions using simple constructs like if, elif, and else.\nLet us start with the basics.",
     "crumbs": [
-      "python-interviews"
+      "Chapter 2 - Making Decisions"
     ]
   },
   {
-    "objectID": "index.html#developer-guide",
-    "href": "index.html#developer-guide",
-    "title": "python-interviews",
-    "section": "Developer Guide",
-    "text": "Developer Guide\nIf you are new to using nbdev here are some useful pointers to get you started.\n\nInstall python_interviews in Development mode\n# make sure python_interviews package is installed in development mode\n$ pip install -e .\n\n# make changes under nbs/ directory\n# ...\n\n# compile to have changes apply to python_interviews\n$ nbdev_prepare",
+    "objectID": "conditionals.html#the-if-statement",
+    "href": "conditionals.html#the-if-statement",
+    "title": "Chapter 2 - Making Decisions",
+    "section": "The if statement",
+    "text": "The if statement\nThe if statement allows Python to run code only when a condition evaluates to True.\n\nscore = 80\n\nif score &gt;= 80:\n    print(\"You're eligible for interview.\")\n\nYou're eligible for interview.\n\n\nIf the condition is True, the indented block runs. If it is False, Python skips it.\nIndentation is not optional in Python. It defines the structure of your program. This is something interviewers pay close attention to.",
     "crumbs": [
-      "python-interviews"
+      "Chapter 2 - Making Decisions"
     ]
   },
   {
-    "objectID": "index.html#usage",
-    "href": "index.html#usage",
-    "title": "python-interviews",
-    "section": "Usage",
-    "text": "Usage\n\nInstallation\nInstall latest from the GitHub repository:\n$ pip install git+https://github.com/j5ynth/python-interviews.git\nor from conda\n$ conda install -c j5ynth python_interviews\nor from pypi\n$ pip install python_interviews\n\n\nDocumentation\nDocumentation can be found hosted on this GitHub repository’s pages. Additionally you can find package manager specific guidelines on conda and pypi respectively.",
+    "objectID": "conditionals.html#adding-else",
+    "href": "conditionals.html#adding-else",
+    "title": "Chapter 2 - Making Decisions",
+    "section": "Adding else",
+    "text": "Adding else\nWhen you want one block of code to run if a condition is True and another block if it is False, you use else.\n\nscore = 79\n\nif score &gt;=80:\n    print(\"You're eligible for interview.\")\nelse:\n    print(\"You're not eligible for interview.\")\n\nYou're not eligible for interview.",
     "crumbs": [
-      "python-interviews"
+      "Chapter 2 - Making Decisions"
     ]
   },
   {
-    "objectID": "index.html#how-to-use",
-    "href": "index.html#how-to-use",
-    "title": "python-interviews",
-    "section": "How to use",
-    "text": "How to use\nFill me in please! Don’t forget code examples:\n\n1+1\n\n2",
+    "objectID": "conditionals.html#multiple-conditions-with-elif",
+    "href": "conditionals.html#multiple-conditions-with-elif",
+    "title": "Chapter 2 - Making Decisions",
+    "section": "Multiple conditions with elif",
+    "text": "Multiple conditions with elif\nSometimes you need to check more than two possibilities. That is where elif comes in.\n\nscore = 75\n\nif score &gt;= 90:\n    print(\"Grade A\")\nelif score &gt;= 75:\n    print(\"Grade B\")\nelif score &gt;= 60:\n    print(\"Grade C\")\nelse:\n    print(\"Grade D\")\n\nGrade B\n\n\nPython evaluates conditions from top to bottom at the first True condition",
     "crumbs": [
-      "python-interviews"
+      "Chapter 2 - Making Decisions"
     ]
   },
   {
-    "objectID": "introduction.html",
-    "href": "introduction.html",
-    "title": "Introduction",
-    "section": "",
-    "text": "In today’s fast-paced technology landscape, preparing for a new project or job interview can be challenging. This is especially true when someone has not revised core concepts for a long time and suddenly needs to refresh their knowledge before an interview or a technical assessment panel.\nThis book is an attempt to revisit both basic and advanced concepts of Python in a practical and approachable way. While a detailed chapter outline is still evolving, the primary goal is simple: readers should be able to learn by writing and running code examples, and by understanding the output they produce.\nLet us begin with a simple example of a Python function.\n\n\nsay_hello\n\ndef say_hello(\n    to\n):\n\nSay Hello to someone.\nIn Python, the keyword def is used to define a function. Here, the name of the function is say_hello, and it accepts a single parameter named to, which is enclosed in parentheses and followed by a colon (:).\nThe line enclosed within triple/duouble quotes is known as a docstring. It provides documentation about the purpose and behavior of the function and is often used by developers and tools to understand what the function does.\nFinally, the return statement sends a value back to the caller. In this example, an f-string (a formatted string prefixed with the letter f) is used to interpolate the value stored in the variable to into the output string.\nLet us call the function as displayed below with a value.\n\nsay_hello(\"J5ynth\")\n\n'Hello J5ynth!'\n\n\nThe output of the function is displayed above and is enclosed within single quotes (’). This happens because the Jupyter Notebook displays the return value of the function by internally calling Python’s built-in print method. Alternatively, one can explicitly call the print method to display the output, as shown below.\nprint(say_hello(\"J5ynth\"))\nBefore trying to write and run the function on your own, it is recommended to first get accustomed to the basic building blocks of the language.\nIf this introduction served as a useful primer, provided clarity, and motivated you to begin preparing for Python interviews, let us move on to the next chapter. We will start with one of the most fundamental concepts in Python - the print statement.",
+    "objectID": "conditionals.html#comparision-and-logical-operators",
+    "href": "conditionals.html#comparision-and-logical-operators",
+    "title": "Chapter 2 - Making Decisions",
+    "section": "Comparision and logical operators",
+    "text": "Comparision and logical operators\nCommon Comparison operators:\n\n== equal to\n!= not equal to\n&gt; greater than\n&lt; less than\n&gt;= greater than or equal to\n&lt;= less than or equal to\n\nLogical operators allow you to combine conditions:\n\nand\nor\nnot\n\nExample:\n\nmath_score = 80\npassed_english = True\n\nif passed_english and math_score &gt;= 80:\n    print(\"You're eligible for interview.\")\n\nYou're eligible for interview.",
     "crumbs": [
-      "Introduction"
+      "Chapter 2 - Making Decisions"
+    ]
+  },
+  {
+    "objectID": "conditionals.html#truthy-and-falsy-values",
+    "href": "conditionals.html#truthy-and-falsy-values",
+    "title": "Chapter 2 - Making Decisions",
+    "section": "Truthy and falsy values",
+    "text": "Truthy and falsy values\nNot all conditions are simple comparisons. In Python, certain values are treated as False automatically. These are known as falsy values.\nCommon falsy values include.\n\n0\n\"\" (empty string)\n[] (empty list)\nNone\nFalse\n\nEverything else is generally considered True.\nExample:\n\ncolors = []\n\nif colors:\n    print(\"List of colors is not empty\")\nelse:\n    print(\"List of colors is empty\")\n\nList of colors is empty\n\n\nThis is a very common interview concept.",
+    "crumbs": [
+      "Chapter 2 - Making Decisions"
+    ]
+  },
+  {
+    "objectID": "conditionals.html#predict-the-output",
+    "href": "conditionals.html#predict-the-output",
+    "title": "Chapter 2 - Making Decisions",
+    "section": "Predict the output",
+    "text": "Predict the output\nTry to predict the output of the following code:\n\nx = 0\n\nif x:\n    print(\"Yes\")\nelse:\n    print(\"No\")",
+    "crumbs": [
+      "Chapter 2 - Making Decisions"
+    ]
+  },
+  {
+    "objectID": "conditionals.html#common-mistakes-to-watch-out-for",
+    "href": "conditionals.html#common-mistakes-to-watch-out-for",
+    "title": "Chapter 2 - Making Decisions",
+    "section": "Common mistakes to watch out for",
+    "text": "Common mistakes to watch out for\n\nUsing = instead of == in conditions\nForgetting indentation\nWriting overly complex nested conditions when simpler logic would work\n\nClean and readable conditional logic leaves a strong impression in interviews.",
+    "crumbs": [
+      "Chapter 2 - Making Decisions"
+    ]
+  },
+  {
+    "objectID": "conditionals.html#quick-recap",
+    "href": "conditionals.html#quick-recap",
+    "title": "Chapter 2 - Making Decisions",
+    "section": "Quick recap",
+    "text": "Quick recap\nIn this chapter, you learned how to:\n\nUse if, elif, and else\nWrite comparison expressions\nCombine conditions using logical operators\nUnderstand truthy and falsy values\n\nWith this foundation, you can now control the flow of your programs.\nIn the next chapter, we will explore loops and learn how to repeat tasks efficiently.",
+    "crumbs": [
+      "Chapter 2 - Making Decisions"
     ]
   },
   {
@@ -137,6 +177,56 @@
     "text": "Quick recap\nIn this chapter, you learned how to:\n\nUse the print statement to display output\nCreate and assign variables\nUnderstand basic Python data types\nFormat strings using f-strings\nTake input from the user\n\nIf these concepts feel comfortable, your are off tto a good start. In the next chapter, we will look at how Python makes decisions using conditional statements.",
     "crumbs": [
       "Chapter 1 - Talking To Python"
+    ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "python-interviews",
+    "section": "",
+    "text": "This file will become your README and also the index of your documentation.",
+    "crumbs": [
+      "python-interviews"
+    ]
+  },
+  {
+    "objectID": "index.html#developer-guide",
+    "href": "index.html#developer-guide",
+    "title": "python-interviews",
+    "section": "Developer Guide",
+    "text": "Developer Guide\nIf you are new to using nbdev here are some useful pointers to get you started.\n\nInstall python_interviews in Development mode\n# make sure python_interviews package is installed in development mode\n$ pip install -e .\n\n# make changes under nbs/ directory\n# ...\n\n# compile to have changes apply to python_interviews\n$ nbdev_prepare",
+    "crumbs": [
+      "python-interviews"
+    ]
+  },
+  {
+    "objectID": "index.html#usage",
+    "href": "index.html#usage",
+    "title": "python-interviews",
+    "section": "Usage",
+    "text": "Usage\n\nInstallation\nInstall latest from the GitHub repository:\n$ pip install git+https://github.com/j5ynth/python-interviews.git\nor from conda\n$ conda install -c j5ynth python_interviews\nor from pypi\n$ pip install python_interviews\n\n\nDocumentation\nDocumentation can be found hosted on this GitHub repository’s pages. Additionally you can find package manager specific guidelines on conda and pypi respectively.",
+    "crumbs": [
+      "python-interviews"
+    ]
+  },
+  {
+    "objectID": "index.html#how-to-use",
+    "href": "index.html#how-to-use",
+    "title": "python-interviews",
+    "section": "How to use",
+    "text": "How to use\nFill me in please! Don’t forget code examples:\n\n1+1\n\n2",
+    "crumbs": [
+      "python-interviews"
+    ]
+  },
+  {
+    "objectID": "introduction.html",
+    "href": "introduction.html",
+    "title": "Introduction",
+    "section": "",
+    "text": "In today’s fast-paced technology landscape, preparing for a new project or job interview can be challenging. This is especially true when someone has not revised core concepts for a long time and suddenly needs to refresh their knowledge before an interview or a technical assessment panel.\nThis book is an attempt to revisit both basic and advanced concepts of Python in a practical and approachable way. While a detailed chapter outline is still evolving, the primary goal is simple: readers should be able to learn by writing and running code examples, and by understanding the output they produce.\nLet us begin with a simple example of a Python function.\n\n\nsay_hello\n\ndef say_hello(\n    to\n):\n\nSay Hello to someone.\nIn Python, the keyword def is used to define a function. Here, the name of the function is say_hello, and it accepts a single parameter named to, which is enclosed in parentheses and followed by a colon (:).\nThe line enclosed within triple/duouble quotes is known as a docstring. It provides documentation about the purpose and behavior of the function and is often used by developers and tools to understand what the function does.\nFinally, the return statement sends a value back to the caller. In this example, an f-string (a formatted string prefixed with the letter f) is used to interpolate the value stored in the variable to into the output string.\nLet us call the function as displayed below with a value.\n\nsay_hello(\"J5ynth\")\n\n'Hello J5ynth!'\n\n\nThe output of the function is displayed above and is enclosed within single quotes (’). This happens because the Jupyter Notebook displays the return value of the function by internally calling Python’s built-in print method. Alternatively, one can explicitly call the print method to display the output, as shown below.\nprint(say_hello(\"J5ynth\"))\nBefore trying to write and run the function on your own, it is recommended to first get accustomed to the basic building blocks of the language.\nIf this introduction served as a useful primer, provided clarity, and motivated you to begin preparing for Python interviews, let us move on to the next chapter. We will start with one of the most fundamental concepts in Python - the print statement.",
+    "crumbs": [
+      "Introduction"
     ]
   }
 ]

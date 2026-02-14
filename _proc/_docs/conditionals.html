@@ -6,9 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="print, variables, and the basics">
+<meta name="description" content="conditionals and logical thinking">
 
-<title>Chapter 1 - Talking To Python – python-interviews</title>
+<title>Chapter 2 - Making Decisions – python-interviews</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -107,11 +107,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <link rel="stylesheet" href="styles.css">
-<meta property="og:title" content="Chapter 1 - Talking To Python – python-interviews">
-<meta property="og:description" content="print, variables, and the basics">
+<meta property="og:title" content="Chapter 2 - Making Decisions – python-interviews">
+<meta property="og:description" content="conditionals and logical thinking">
 <meta property="og:site_name" content="python-interviews">
-<meta name="twitter:title" content="Chapter 1 - Talking To Python – python-interviews">
-<meta name="twitter:description" content="print, variables, and the basics">
+<meta name="twitter:title" content="Chapter 2 - Making Decisions – python-interviews">
+<meta name="twitter:description" content="conditionals and logical thinking">
 <meta name="twitter:card" content="summary">
 </head>
 
@@ -136,7 +136,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./print.html">Chapter 1 - Talking To Python</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./conditionals.html">Chapter 2 - Making Decisions</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -162,13 +162,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./print.html" class="sidebar-item-text sidebar-link active">
+  <a href="./print.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Chapter 1 - Talking To Python</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./conditionals.html" class="sidebar-item-text sidebar-link">
+  <a href="./conditionals.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Chapter 2 - Making Decisions</span></a>
   </div>
 </li>
@@ -182,28 +182,28 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#the-print-statement" id="toc-the-print-statement" class="nav-link active" data-scroll-target="#the-print-statement">The <code>print</code> statement</a></li>
-  <li><a href="#variables-and-assignments" id="toc-variables-and-assignments" class="nav-link" data-scroll-target="#variables-and-assignments">Variables and assignments</a></li>
-  <li><a href="#basic-data-types" id="toc-basic-data-types" class="nav-link" data-scroll-target="#basic-data-types">Basic data types</a></li>
-  <li><a href="#string-formatting-with-f-strings" id="toc-string-formatting-with-f-strings" class="nav-link" data-scroll-target="#string-formatting-with-f-strings">String formatting with f-strings</a></li>
-  <li><a href="#taking-input-from-the-user" id="toc-taking-input-from-the-user" class="nav-link" data-scroll-target="#taking-input-from-the-user">Taking input from the user</a></li>
+  <li><a href="#the-if-statement" id="toc-the-if-statement" class="nav-link active" data-scroll-target="#the-if-statement">The <code>if</code> statement</a></li>
+  <li><a href="#adding-else" id="toc-adding-else" class="nav-link" data-scroll-target="#adding-else">Adding <code>else</code></a></li>
+  <li><a href="#multiple-conditions-with-elif" id="toc-multiple-conditions-with-elif" class="nav-link" data-scroll-target="#multiple-conditions-with-elif">Multiple conditions with <code>elif</code></a></li>
+  <li><a href="#comparision-and-logical-operators" id="toc-comparision-and-logical-operators" class="nav-link" data-scroll-target="#comparision-and-logical-operators">Comparision and logical operators</a></li>
+  <li><a href="#truthy-and-falsy-values" id="toc-truthy-and-falsy-values" class="nav-link" data-scroll-target="#truthy-and-falsy-values">Truthy and falsy values</a></li>
   <li><a href="#predict-the-output" id="toc-predict-the-output" class="nav-link" data-scroll-target="#predict-the-output">Predict the output</a></li>
   <li><a href="#common-mistakes-to-watch-out-for" id="toc-common-mistakes-to-watch-out-for" class="nav-link" data-scroll-target="#common-mistakes-to-watch-out-for">Common mistakes to watch out for</a></li>
   <li><a href="#quick-recap" id="toc-quick-recap" class="nav-link" data-scroll-target="#quick-recap">Quick recap</a></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/j5ynth/python-interviews/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div><div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="print.html.md"><i class="bi bi-file-code"></i>CommonMark</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/j5ynth/python-interviews/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div><div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="conditionals.html.md"><i class="bi bi-file-code"></i>CommonMark</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Chapter 1 - Talking To Python</h1>
+<h1 class="title">Chapter 2 - Making Decisions</h1>
 </div>
 
 <div>
   <div class="description">
-    print, variables, and the basics
+    conditionals and logical thinking
   </div>
 </div>
 
@@ -221,127 +221,145 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <!-- WARNING: THIS FILE WAS AUTOGENERATED! DO NOT EDIT! -->
-<p>Before we get into anything fancy, we need to learn how to <em>talk</em> to Python.</p>
-<p>Almost every Python program you will ever write - whether for an interview, a script, or a real-world application - starts with simple statements that display output and store values.</p>
-<p>This chapter focuses on the abosolute essentials. If you already know some of these, treat this as a quick revision. If not, take a few minutes to run the examples and observe.</p>
-<section id="the-print-statement" class="level2">
-<h2 class="anchored" data-anchor-id="the-print-statement">The <code>print</code> statement</h2>
-<p>The <code>print</code> statement is one of the most frequently used functions in Python. It is used to display output on the screen and is often the first thing you write when learning a language.</p>
-<div id="e51c8769" class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Hello, Python"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>In the previous chapter, we learned how to Talk to Python. Now it is time to make Python think.</p>
+<p>In interviews, writing correct conditional logic is more important than writing long programs. Interviewers often test how cleary you can express decisions using simple constructs like <code>if</code>, <code>elif</code>, and <code>else</code>.</p>
+<p>Let us start with the basics.</p>
+<section id="the-if-statement" class="level2">
+<h2 class="anchored" data-anchor-id="the-if-statement">The <code>if</code> statement</h2>
+<p>The <code>if</code> statement allows Python to run code only when a condition evaluates to <code>True</code>.</p>
+<div id="f8aa534e-0d00-465e-8300-1fbe1753149e" class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>score <span class="op">=</span> <span class="dv">80</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> score <span class="op">&gt;=</span> <span class="dv">80</span>:</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"You're eligible for interview."</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>Hello, Python</code></pre>
+<pre><code>You're eligible for interview.</code></pre>
 </div>
 </div>
-<p>When this line is run, Python prints the text inside the quotes to the output. In interviews, <code>print</code> is commonly used to check logic, verify results, or demonstrate how a pience of code behaves.</p>
-<p>You can print multiple values at one.</p>
-<div id="30c3fbfe" class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Python"</span>, <span class="st">"Interview"</span>, <span class="st">"Prep"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
-<p>Python automatically separates them with a space</p>
+<p>If the condition is <code>True</code>, the indented block runs. If it is <code>False</code>, Python skips it.</p>
+<p>Indentation is not optional in Python. It defines the structure of your program. This is something interviewers pay close attention to.</p>
 </section>
-<section id="variables-and-assignments" class="level2">
-<h2 class="anchored" data-anchor-id="variables-and-assignments">Variables and assignments</h2>
-<p>A variable is used to store data so that it can be reused later. In Python, assigning a value to a variable is straightforward.</p>
-<div id="09dec94b" class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>name <span class="op">=</span> <span class="st">"J5ynth"</span></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>age <span class="op">=</span> <span class="dv">5</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<section id="adding-else" class="level2">
+<h2 class="anchored" data-anchor-id="adding-else">Adding <code>else</code></h2>
+<p>When you want one block of code to run if a condition is <code>True</code> and another block if it is <code>False</code>, you use <code>else</code>.</p>
+<div id="c653d796-ddf8-4c5f-801f-95b4ba7fba94" class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>score <span class="op">=</span> <span class="dv">79</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> score <span class="op">&gt;=</span><span class="dv">80</span>:</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"You're eligible for interview."</span>)</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span>:</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"You're not eligible for interview."</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>You're not eligible for interview.</code></pre>
 </div>
-<p>Here, <code>name</code> stores a string value and <code>age</code> stores an integer. Python figures out the data type automatically, so there is no need to explicitly mention it.</p>
-<p>One important thing to remember:</p>
-<blockquote class="blockquote">
-<p>Python is <code>dynamically</code> typed.</p>
-</blockquote>
-<p>This means the same variable can point to different types of values at different times.</p>
-<div id="a1ad819f" class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>value <span class="op">=</span> <span class="dv">10</span></span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>value <span class="op">=</span> <span class="st">"ten"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-<p>This is perfectly valid Python code.</p>
 </section>
-<section id="basic-data-types" class="level2">
-<h2 class="anchored" data-anchor-id="basic-data-types">Basic data types</h2>
-<p>Some of the most commonly used data types in Python are:</p>
+<section id="multiple-conditions-with-elif" class="level2">
+<h2 class="anchored" data-anchor-id="multiple-conditions-with-elif">Multiple conditions with <code>elif</code></h2>
+<p>Sometimes you need to check more than two possibilities. That is where <code>elif</code> comes in.</p>
+<div id="5ef8582e-1239-42d8-a0fb-0da21f6857fd" class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>score <span class="op">=</span> <span class="dv">75</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> score <span class="op">&gt;=</span> <span class="dv">90</span>:</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"Grade A"</span>)</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="cf">elif</span> score <span class="op">&gt;=</span> <span class="dv">75</span>:</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"Grade B"</span>)</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="cf">elif</span> score <span class="op">&gt;=</span> <span class="dv">60</span>:</span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"Grade C"</span>)</span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span>:</span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"Grade D"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Grade B</code></pre>
+</div>
+</div>
+<p>Python evaluates conditions from top to bottom at the first <code>True</code> condition</p>
+</section>
+<section id="comparision-and-logical-operators" class="level2">
+<h2 class="anchored" data-anchor-id="comparision-and-logical-operators">Comparision and logical operators</h2>
+<p>Common Comparison operators:</p>
 <ul>
-<li><code>int</code> - whole numbers</li>
-<li><code>float</code> - decimal numbers</li>
-<li><code>str</code> - text values</li>
-<li><code>bool</code> - <code>True</code> or <code>False</code></li>
+<li><code>==</code> equal to</li>
+<li><code>!=</code> not equal to</li>
+<li><code>&gt;</code> greater than</li>
+<li><code>&lt;</code> less than</li>
+<li><code>&gt;=</code> greater than or equal to</li>
+<li><code>&lt;=</code> less than or equal to</li>
 </ul>
-<p>Examples:</p>
-<div id="a48491f0" class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>count <span class="op">=</span> <span class="dv">3</span></span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>price <span class="op">=</span> <span class="fl">99.99</span></span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>language <span class="op">=</span> <span class="st">"Python"</span></span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>is_ready <span class="op">=</span> <span class="va">True</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
-<p>To check the type of a variable, you use use built-in <code>type()</code> function.</p>
-<div id="75b897ef" class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">type</span>(language))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Logical operators allow you to combine conditions:</p>
+<ul>
+<li><code>and</code></li>
+<li><code>or</code></li>
+<li><code>not</code></li>
+</ul>
+<p>Example:</p>
+<div id="a19f65e8-a19b-4283-897b-d407394b2741" class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>math_score <span class="op">=</span> <span class="dv">80</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>passed_english <span class="op">=</span> <span class="va">True</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> passed_english <span class="kw">and</span> math_score <span class="op">&gt;=</span> <span class="dv">80</span>:</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"You're eligible for interview."</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>&lt;class 'str'&gt;</code></pre>
+<pre><code>You're eligible for interview.</code></pre>
 </div>
 </div>
-<p>This is a common interview question, especially for beginners.</p>
 </section>
-<section id="string-formatting-with-f-strings" class="level2">
-<h2 class="anchored" data-anchor-id="string-formatting-with-f-strings">String formatting with f-strings</h2>
-<p>Strings are everywhere in Python, and formatting them properly makes your code cleaner and more readable. One of the most popular ways to do this is by using <em>formatted strings</em>, also known as f-strings.</p>
-<div id="b0c006ed" class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>name <span class="op">=</span> <span class="st">"J5ynth"</span></span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Hello, </span><span class="sc">{</span>name<span class="sc">}</span><span class="ss">"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<section id="truthy-and-falsy-values" class="level2">
+<h2 class="anchored" data-anchor-id="truthy-and-falsy-values">Truthy and falsy values</h2>
+<p>Not all conditions are simple comparisons. In Python, certain values are treated as <code>False</code> automatically. These are known as <em>falsy</em> values.</p>
+<p>Common falsy values include.</p>
+<ul>
+<li><code>0</code></li>
+<li><code>""</code> (empty string)</li>
+<li><code>[]</code> (empty list)</li>
+<li><code>None</code></li>
+<li><code>False</code></li>
+</ul>
+<p>Everything else is generally considered <code>True</code>.</p>
+<p>Example:</p>
+<div id="c2ea3ab0-320a-439c-b99f-d55abc5f34b7" class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>colors <span class="op">=</span> []</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> colors:</span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"List of colors is not empty"</span>)</span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span>:</span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"List of colors is empty"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>Hello, J5ynth</code></pre>
+<pre><code>List of colors is empty</code></pre>
 </div>
 </div>
-<p>The letter <code>f</code> before the string tells Python to evaluate anything inside the curly braces <code>{}</code> and replace it with the corresponding value.</p>
-<p>This approach is both readable and efficient, and interviewers often expect candiates to be comfortable with it.</p>
-</section>
-<section id="taking-input-from-the-user" class="level2">
-<h2 class="anchored" data-anchor-id="taking-input-from-the-user">Taking input from the user</h2>
-<p>Python allows you to take input from the user using <code>input()</code> function.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>user_name <span class="op">=</span> <span class="bu">input</span>(<span class="st">"Enter your name: "</span>)</span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Welcome, </span><span class="sc">{</span>user_name<span class="sc">}</span><span class="ss">"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>One important thing to note is that</p>
-<blockquote class="blockquote">
-<p><code>input</code> always returns a string.</p>
-</blockquote>
-<p>Even if the user enters a number, Python teats it as text unless explicitly converted.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>age <span class="op">=</span> <span class="bu">input</span>(<span class="st">"Enter your age: "</span>)</span>
-<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">type</span>(age))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>We will revisit type conversion in later chapters.</p>
+<p>This is a very common interview concept.</p>
 </section>
 <section id="predict-the-output" class="level2">
 <h2 class="anchored" data-anchor-id="predict-the-output">Predict the output</h2>
-<div id="7c83a1ee" class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> <span class="dv">10</span></span>
-<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> <span class="st">"10"</span></span>
-<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a><span class="co"># print(x + x)</span></span>
-<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a><span class="co"># print(y + y)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
-<p>Run the code and compare the result with your expectation. Questions like these frequently appear in interviews to test conceptual clarity.</p>
+<p>Try to predict the output of the following code:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> x:</span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"Yes"</span>)</span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span>:</span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"No"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="common-mistakes-to-watch-out-for" class="level2">
 <h2 class="anchored" data-anchor-id="common-mistakes-to-watch-out-for">Common mistakes to watch out for</h2>
 <ul>
-<li>Forgetting quotes around strings</li>
-<li>Mixing strings and numbers without proper conversion</li>
-<li>Assuming <code>input()</code> returns a number</li>
+<li>Using <code>=</code> instead of <code>==</code> in conditions</li>
+<li>Forgetting indentation</li>
+<li>Writing overly complex nested conditions when simpler logic would work</li>
 </ul>
-<p>These mistakes are normal when learning and easy to fix once you are aware of them.</p>
+<p>Clean and readable conditional logic leaves a strong impression in interviews.</p>
 </section>
 <section id="quick-recap" class="level2">
 <h2 class="anchored" data-anchor-id="quick-recap">Quick recap</h2>
 <p>In this chapter, you learned how to:</p>
 <ul>
-<li>Use the <code>print</code> statement to display output</li>
-<li>Create and assign variables</li>
-<li>Understand basic Python data types</li>
-<li>Format strings using f-strings</li>
-<li>Take input from the user</li>
+<li>Use <code>if</code>, <code>elif</code>, and <code>else</code></li>
+<li>Write comparison expressions</li>
+<li>Combine conditions using logical operators</li>
+<li>Understand truthy and falsy values</li>
 </ul>
-<p>If these concepts feel comfortable, your are off tto a good start. In the next chapter, we will look at how Python makes decisions using conditional statements.</p>
+<p>With this foundation, you can now control the flow of your programs.</p>
+<p>In the next chapter, we will explore loops and learn how to repeat tasks efficiently.</p>
 
 
 </section>

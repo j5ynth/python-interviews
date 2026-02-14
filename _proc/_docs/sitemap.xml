@@ -1,15 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://j5ynth.github.io/python-interviews/index.html</loc>
-    <lastmod>2026-02-08T15:34:48.245Z</lastmod>
-  </url>
-  <url>
-    <loc>https://j5ynth.github.io/python-interviews/introduction.html</loc>
-    <lastmod>2026-02-08T15:34:48.221Z</lastmod>
+    <loc>https://j5ynth.github.io/python-interviews/conditionals.html</loc>
+    <lastmod>2026-02-14T14:05:01.349Z</lastmod>
   </url>
   <url>
     <loc>https://j5ynth.github.io/python-interviews/print.html</loc>
-    <lastmod>2026-02-08T15:34:48.224Z</lastmod>
+    <lastmod>2026-02-14T14:05:01.339Z</lastmod>
+  </url>
+  <url>
+    <loc>https://j5ynth.github.io/python-interviews/index.html</loc>
+    <lastmod>2026-02-14T14:05:01.337Z</lastmod>
+  </url>
+  <url>
+    <loc>https://j5ynth.github.io/python-interviews/introduction.html</loc>
+    <lastmod>2026-02-14T14:05:01.345Z</lastmod>
   </url>
 </urlset>
